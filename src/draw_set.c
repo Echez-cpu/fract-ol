@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_me.c                                        :+:      :+:    :+:   */
+/*   draw_set.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 13:43:05 by pokpalae          #+#    #+#             */
-/*   Updated: 2024/05/29 20:42:14 by pokpalae         ###   ########.fr       */
+/*   Updated: 2024/05/31 14:33:39 by pokpalae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-static void	fractol_set_c(t_fractol *z, t_fractol *c, t_fractol *fract)
+void	fractol_set_c(t_fractol *z, t_fractol *c, t_fractol *fract)
 {
 	if (!ft_strncmp(fract->title, "Julia", 5))
 	{
@@ -26,7 +26,7 @@ static void	fractol_set_c(t_fractol *z, t_fractol *c, t_fractol *fract)
 	}
 }
 
-static void	ft_put_pixel(int x, int y, t_fractol *fract, int rgb)
+void	ft_put_pixel(int x, int y, t_fractol *fract, int rgb)
 {
 	int	offset;
 
@@ -34,7 +34,7 @@ static void	ft_put_pixel(int x, int y, t_fractol *fract, int rgb)
 	*(unsigned int *)(fract->img_addr + offset) = rgb;
 }
 
-static void	map_to_pixel(int x, int y, t_fractol *fract)
+void	map_to_pixel(int x, int y, t_fractol *fract)
 {
 	t_fractol	z;
 	t_fractol	c;
@@ -61,24 +61,4 @@ static void	map_to_pixel(int x, int y, t_fractol *fract)
 		i++;
 	}
 	ft_put_pixel(x, y, fract, BLACK);
-}
-
-void	render_fractol(t_fractol *fract)
-{
-	int	x;
-	int	y;
-
-	y = 0;
-	while (y < HEIGHT)
-	{
-		x = 0;
-		while (x < WIDTH)
-		{
-			map_to_pixel(x, y, fract);
-			x++;
-		}
-		y++;
-	}
-	mlx_put_image_to_window(fract->mlx_connect, fract->window, fract->img, 0,
-		0);
 }

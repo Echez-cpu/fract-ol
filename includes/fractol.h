@@ -6,7 +6,7 @@
 /*   By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 14:14:11 by pokpalae          #+#    #+#             */
-/*   Updated: 2024/05/29 20:26:45 by pokpalae         ###   ########.fr       */
+/*   Updated: 2024/05/31 14:32:53 by pokpalae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@
 # include <X11/keysym.h>
 # include <math.h>
 
-# define WIDTH 1000
-# define HEIGHT 1000
+# define WIDTH 500
+# define HEIGHT 500
+# define CHUNK_SIZE 495
 
 # define BLACK 0x000000
 # define WHITE 0xFFFFFF
@@ -60,6 +61,8 @@ typedef struct s_fractol
 	int		current_color;
 	double	julia_r;
 	double	julia_i;
+	double	chunk_x;
+	double	chunk_y;
 }			t_fractol;
 
 typedef struct s_map_coords
@@ -89,5 +92,11 @@ void		print_error(void);
 double		atodl(char *s);
 void		zoom_in(t_fractol *fract, double mouse_r, double mouse_i);
 void		zoom_out(t_fractol *fract, double mouse_r, double mouse_i);
-
+void		fractol_set_c(t_fractol *z, t_fractol *c, t_fractol *fract);
+void		ft_put_pixel(int x, int y, t_fractol *fract, int rgb);
+void		map_to_pixel(int x, int y, t_fractol *fract);
+void		render_fractol_chunk(t_fractol *fract);
+int			render_loop(t_fractol *fract);
+void		start_rendering(t_fractol *fract);
+void		render_fractol(t_fractol *fract);
 #endif

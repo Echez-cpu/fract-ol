@@ -6,7 +6,7 @@
 #    By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/29 20:01:56 by pokpalae          #+#    #+#              #
-#    Updated: 2024/05/29 22:48:45 by pokpalae         ###   ########.fr        #
+#    Updated: 2024/05/31 12:29:39 by pokpalae         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,11 +30,12 @@ OBJ_DIR				=	obj/
 
 SRC					=	main.c \
 						initial_fract.c \
-						render_me.c \
+						render_chunk.c \
 						events_hand.c \
 						utils.c \
 						help.c \
-						color.c
+						color.c\
+						draw_set.c
 
 SRCS				=	$(addprefix $(SRC_DIR), $(SRC))
 

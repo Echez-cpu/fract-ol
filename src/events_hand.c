@@ -6,7 +6,7 @@
 /*   By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 13:59:37 by pokpalae          #+#    #+#             */
-/*   Updated: 2024/05/29 20:27:11 by pokpalae         ###   ########.fr       */
+/*   Updated: 2024/05/31 14:12:40 by pokpalae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int	handle_key(int keysym, t_fractol *fract)
 	else if (keysym == XK_Down || keysym == XK_s)
 		fract->shift_i += (0.1 * fract->zoom);
 	else if (keysym == XK_KP_Add)
-		fract->iterations += 17;
+		fract->iterations += 10;
 	else if (keysym == XK_KP_Subtract)
-		fract->iterations -= 17;
+		fract->iterations -= 10;
 	else if (keysym == XK_space)
 		shift_colors(fract);
 	render_fractol(fract);

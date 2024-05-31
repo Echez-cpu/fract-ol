@@ -6,7 +6,7 @@
 /*   By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 19:50:06 by pokpalae          #+#    #+#             */
-/*   Updated: 2024/05/29 20:14:48 by pokpalae         ###   ########.fr       */
+/*   Updated: 2024/05/31 14:33:03 by pokpalae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	events_init(t_fractol *fract)
 static void	data_init(t_fractol *fract)
 {
 	fract->hypotenuse = 4;
-	fract->iterations = 100;
+	fract->iterations = 30;
 	fract->shift_r = 0.0;
 	fract->shift_i = 0.0;
 	fract->zoom = 1.0;
