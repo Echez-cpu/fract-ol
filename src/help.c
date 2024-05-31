@@ -6,7 +6,7 @@
 /*   By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 15:06:18 by pokpalae          #+#    #+#             */
-/*   Updated: 2024/05/31 15:07:03 by pokpalae         ###   ########.fr       */
+/*   Updated: 2024/05/31 15:15:19 by pokpalae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	instructions(void)
 	ft_printf("\nWelcome to the fractal exploration!\nSadly, MiniLibX's ");
 	ft_printf("limited capabilities result in slow🙁rendering\n");
 	ft_printf("but i managed it well😊\n");
-	ft_print("To move the fractal: Press keys: W, A, S, D or Left, ");
+	ft_printf("To move the fractal: Press keys: W, A, S, D or Left, ");
 	ft_printf("Right, Up, Down arrows\nTo zoom in:		Scroll mouse wheel");
 	ft_printf(" up\nTo zoom out:		Scroll mouse wheel down\n");
 	ft_printf("To switch colours:	Press: Space bar\n");
