@@ -41,16 +41,28 @@ Getting to know the basics of this graphical library with no prior knowledge can
 
 
 mlx_init()
+
 mlx_new_window()
+
 mlx_destroy_window()
+
 mlx_destroy_display()
+
 mlx_new_image()
+
 mlx_destroy_image()
+
 mlx_get_data_addr()
+
 mlx_pixel_put()
+
 mlx_put_image_to_window()
+
 mlx_hook()
+
 mlx_loop()
+
+
 🔸 mlx_init()
 
 
