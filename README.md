@@ -2,10 +2,10 @@
 
 
 This project was challenging, though enjoyable to complete, and the end result is so worth it!
-I completed the mandatory and 4/5 of the bonus (everything except the third fractal). Note: The zoom centering the cursor is not perfect - please share if you figure it out!
+I completed the mandatory and 4/5 of the bonus (everything except the third fractal). Note: The zoom centering the cursor is not perfect - please share if you figure it out! To improve rendering you can play with the Chunk_size constant as defined in the header file. 
 
 
-The versions included are /linux /macos_commented and /norminette
+This version included is for linux
 
 
 Here is the outline of how I tackled fract-ol:
